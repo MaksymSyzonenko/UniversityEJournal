@@ -1,0 +1,14 @@
+D:\На новый пк\Проэкты\Универ\University-E-Journal\University-E-Journal-PostgreSQL\bin\Debug\net7.0\University-E-Journal-PostgreSQL.deps.json
+D:\На новый пк\Проэкты\Универ\University-E-Journal\University-E-Journal-PostgreSQL\bin\Debug\net7.0\University-E-Journal-PostgreSQL.runtimeconfig.json
+D:\На новый пк\Проэкты\Универ\University-E-Journal\University-E-Journal-PostgreSQL\bin\Debug\net7.0\University-E-Journal-PostgreSQL.dll
+D:\На новый пк\Проэкты\Универ\University-E-Journal\University-E-Journal-PostgreSQL\bin\Debug\net7.0\University-E-Journal-PostgreSQL.pdb
+D:\На новый пк\Проэкты\Универ\University-E-Journal\University-E-Journal-PostgreSQL\obj\Debug\net7.0\University-E-Journal-PostgreSQL.csproj.AssemblyReference.cache
+D:\На новый пк\Проэкты\Универ\University-E-Journal\University-E-Journal-PostgreSQL\obj\Debug\net7.0\University-E-Journal-PostgreSQL.GeneratedMSBuildEditorConfig.editorconfig
+D:\На новый пк\Проэкты\Универ\University-E-Journal\University-E-Journal-PostgreSQL\obj\Debug\net7.0\University-E-Journal-PostgreSQL.AssemblyInfoInputs.cache
+D:\На новый пк\Проэкты\Универ\University-E-Journal\University-E-Journal-PostgreSQL\obj\Debug\net7.0\University-E-Journal-PostgreSQL.AssemblyInfo.cs
+D:\На новый пк\Проэкты\Универ\University-E-Journal\University-E-Journal-PostgreSQL\obj\Debug\net7.0\University-E-Journal-PostgreSQL.csproj.CoreCompileInputs.cache
+D:\На новый пк\Проэкты\Универ\University-E-Journal\University-E-Journal-PostgreSQL\obj\Debug\net7.0\University-E-Journal-PostgreSQL.dll
+D:\На новый пк\Проэкты\Универ\University-E-Journal\University-E-Journal-PostgreSQL\obj\Debug\net7.0\refint\University-E-Journal-PostgreSQL.dll
+D:\На новый пк\Проэкты\Универ\University-E-Journal\University-E-Journal-PostgreSQL\obj\Debug\net7.0\University-E-Journal-PostgreSQL.pdb
+D:\На новый пк\Проэкты\Универ\University-E-Journal\University-E-Journal-PostgreSQL\obj\Debug\net7.0\University-E-Journal-PostgreSQL.genruntimeconfig.cache
+D:\На новый пк\Проэкты\Универ\University-E-Journal\University-E-Journal-PostgreSQL\obj\Debug\net7.0\ref\University-E-Journal-PostgreSQL.dll
