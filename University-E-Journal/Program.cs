@@ -21,7 +21,10 @@ namespace University_E_Journal
             builder.Services
                 .AddUniversityEJournalData(connectionString!)
                 .AddStudentCommands()
-                .AddGroupCommands();
+                .AddGroupCommands()
+                .AddSubjectCommands()
+                .AddTeacherCommands()
+                .AddGradeCommands();
             builder.Services.AddSwaggerGen(options =>
             {
                 options.TagActionsBy(api =>

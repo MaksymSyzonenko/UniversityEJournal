@@ -16,15 +16,15 @@ namespace University_E_Journal_PostgreSQL.Data.Configurations
 
             builder.HasOne(g => g.Student)
                 .WithMany(st => st.Grades)
-                .HasForeignKey(g => g.StudentID);
+                .HasForeignKey(g => g.StudentId);
 
             builder.HasOne(g => g.Subject)
                 .WithMany(s => s.Grades)
-                .HasForeignKey(g => g.SubjectID);
+                .HasForeignKey(g => g.SubjectId);
 
             builder.HasOne(g => g.Teacher)
                 .WithMany(t => t.Grades)
-                .HasForeignKey(g => g.TeacherID);
+                .HasForeignKey(g => g.TeacherId);
         }
     }
 }

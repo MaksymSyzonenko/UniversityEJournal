@@ -1,5 +1,5 @@
 ﻿using University_E_Journal_PostgreSQL.Data;
-using University_E_Journal_PostgreSQL.Data.DTO;
+using University_E_Journal_PostgreSQL.Data.DTO.Subject;
 
 namespace University_E_Journal_PostgreSQL.Commands.Subject.Update
 {

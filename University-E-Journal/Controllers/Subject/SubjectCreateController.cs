@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using University_E_Journal_PostgreSQL.Commands.Subject.Create;
-using University_E_Journal_PostgreSQL.Data.DTO;
+using University_E_Journal_PostgreSQL.Data.DTO.Subject;
 
 namespace University_E_Journal.Controllers.Subject
 {
@@ -9,8 +9,8 @@ namespace University_E_Journal.Controllers.Subject
     [ApiExplorerSettings(GroupName = "subjects")]
     public sealed class SubjectCreateController : ControllerBase
     {
-        private readonly IUpdateSubjectCommand _command;
-        public SubjectCreateController(IUpdateSubjectCommand command)
+        private readonly ICreateSubjectCommand _command;
+        public SubjectCreateController(ICreateSubjectCommand command)
         {
             _command = command;
         }
@@ -26,9 +26,9 @@ namespace University_E_Journal.Controllers.Subject
                 await _command.ExecuteAsync(dto);
                 return Ok("Subject created successfully");
             }
-            catch (Exception ex)
+            catch
             {
-                return StatusCode(500, $"Internal server error: {ex.Message}");
+                return StatusCode(500, $"Error");
             }
         }
     }

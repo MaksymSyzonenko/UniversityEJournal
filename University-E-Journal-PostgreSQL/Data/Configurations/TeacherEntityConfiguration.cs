@@ -17,7 +17,7 @@ namespace University_E_Journal_PostgreSQL.Data.Configurations
 
             builder.HasMany(t => t.Subjects)
                 .WithOne(s => s.Teacher)
-                .HasForeignKey(s => s.TeacherID);
+                .HasForeignKey(s => s.TeacherId);
         }
     }
 }

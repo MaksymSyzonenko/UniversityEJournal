@@ -1,6 +1,6 @@
 ﻿using University_E_Journal_PostgreSQL.Data.Entities;
 using University_E_Journal_PostgreSQL.Data;
-using University_E_Journal_PostgreSQL.Data.DTO;
+using University_E_Journal_PostgreSQL.Data.DTO.Grade;
 
 namespace University_E_Journal_PostgreSQL.Commands.Grade.Add
 {
@@ -17,9 +17,9 @@ namespace University_E_Journal_PostgreSQL.Commands.Grade.Add
             {
                 Value = dto.Value,
                 Date = dto.Date,
-                StudentID = dto.StudentID,
-                SubjectID = dto.SubjectID,
-                TeacherID = dto.TeacherID,
+                StudentId = dto.StudentId,
+                SubjectId = dto.SubjectId,
+                TeacherId = dto.TeacherId,
             };
 
             _context.Grades.Add(grade);

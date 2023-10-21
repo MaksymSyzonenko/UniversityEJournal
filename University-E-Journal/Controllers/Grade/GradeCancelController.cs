@@ -14,9 +14,9 @@ namespace University_E_Journal.Controllers.Grade
         {
             _command = command;
         }
-        [HttpPost]
+        [HttpPut]
         [Route("cancel")]
-        public async Task<IActionResult> CreateGrade([FromBody] string Id)
+        public async Task<IActionResult> CancelGrade([FromBody] string Id)
         {
             if (string.IsNullOrEmpty(Id))
                 return BadRequest("Invalid JSON data");

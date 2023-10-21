@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using University_E_Journal_PostgreSQL.Commands.Teacher.Create;
-using University_E_Journal_PostgreSQL.Data.DTO;
+using University_E_Journal_PostgreSQL.Data.DTO.Teacher;
 
 namespace University_E_Journal.Controllers.Teacher
 {
@@ -26,9 +26,9 @@ namespace University_E_Journal.Controllers.Teacher
                 await _command.ExecuteAsync(dto);
                 return Ok("Teacher created successfully");
             }
-            catch (Exception ex)
+            catch
             {
-                return StatusCode(500, $"Internal server error: {ex.Message}");
+                return StatusCode(500, $"Error");
             }
         }
     }

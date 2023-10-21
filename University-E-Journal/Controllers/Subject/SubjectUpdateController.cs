@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using University_E_Journal_PostgreSQL.Commands.Subject.Update;
-using University_E_Journal_PostgreSQL.Data.DTO;
+using University_E_Journal_PostgreSQL.Data.DTO.Subject;
 
 namespace University_E_Journal.Controllers.Subject
 {
@@ -14,9 +14,9 @@ namespace University_E_Journal.Controllers.Subject
         {
             _command = command;
         }
-        [HttpPost]
+        [HttpPut]
         [Route("update")]
-        public async Task<IActionResult> CreateSubject([FromBody] SubjectUpdateDto data)
+        public async Task<IActionResult> UpdateSubject([FromBody] SubjectUpdateDto data)
         {
             if (data == null)
                 return BadRequest("Invalid JSON data");
@@ -26,9 +26,9 @@ namespace University_E_Journal.Controllers.Subject
                 await _command.ExecuteAsync(data);
                 return Ok("Subject updated successfully");
             }
-            catch (Exception ex)
+            catch
             {
-                return StatusCode(500, $"Internal server error: {ex.Message}");
+                return StatusCode(500, $"Error");
             }
         }
     }

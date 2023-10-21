@@ -1,6 +1,6 @@
-﻿using University_E_Journal_PostgreSQL.Data.DTO;
-using University_E_Journal_PostgreSQL.Data.Entities;
+﻿using University_E_Journal_PostgreSQL.Data.Entities;
 using University_E_Journal_PostgreSQL.Data;
+using University_E_Journal_PostgreSQL.Data.DTO.Teacher;
 
 namespace University_E_Journal_PostgreSQL.Commands.Teacher.Create
 {

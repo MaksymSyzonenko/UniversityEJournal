@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using University_E_Journal_PostgreSQL.Commands.Group.Create;
-using University_E_Journal_PostgreSQL.Data.DTO;
+using University_E_Journal_PostgreSQL.Data.DTO.Group;
 
 namespace University_E_Journal.Controllers.Group
 {
@@ -26,9 +26,9 @@ namespace University_E_Journal.Controllers.Group
                 await _command.ExecuteAsync(dto);
                 return Ok("Group created successfully");
             }
-            catch (Exception ex)
+            catch
             {
-                return StatusCode(500, $"Internal server error: {ex.Message}");
+                return StatusCode(500, $"Erorr");
             }
         }
     }

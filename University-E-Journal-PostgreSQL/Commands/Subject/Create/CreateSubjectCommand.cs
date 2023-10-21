@@ -1,10 +1,10 @@
-﻿using University_E_Journal_PostgreSQL.Data.DTO;
-using University_E_Journal_PostgreSQL.Data.Entities;
+﻿using University_E_Journal_PostgreSQL.Data.Entities;
 using University_E_Journal_PostgreSQL.Data;
+using University_E_Journal_PostgreSQL.Data.DTO.Subject;
 
 namespace University_E_Journal_PostgreSQL.Commands.Subject.Create
 {
-    public sealed class CreateSubjectCommand : IUpdateSubjectCommand
+    public sealed class CreateSubjectCommand : ICreateSubjectCommand
     {
         private readonly UniversityEJournalDbContext _context;
         public CreateSubjectCommand(UniversityEJournalDbContext context)
@@ -16,7 +16,7 @@ namespace University_E_Journal_PostgreSQL.Commands.Subject.Create
             SubjectEntity subject = new()
             {
                 Name = dto.Name,
-                TeacherID = dto.TeacherID,
+                TeacherId = dto.TeacherId,
             };
 
             _context.Subjects.Add(subject);
