@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using University_E_Journal_PostgreSQL.Data;
@@ -11,9 +12,11 @@ using University_E_Journal_PostgreSQL.Data;
 namespace University_E_Journal_PostgreSQL.Migrations
 {
     [DbContext(typeof(UniversityEJournalDbContext))]
-    partial class UniversityEJournalDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231020103752_AddedAttendaces")]
+    partial class AddedAttendaces
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

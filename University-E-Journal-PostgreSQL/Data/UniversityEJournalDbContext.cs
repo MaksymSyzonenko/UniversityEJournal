@@ -15,6 +15,7 @@ namespace University_E_Journal_PostgreSQL.Data
         public DbSet<StudentEntity> Students { get; set; }
         public DbSet<GradeEntity> Grades { get; set; }
         public DbSet<GroupEntity> Groups { get; set; }
+        public DbSet<AttendanceEntity> Attendances { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

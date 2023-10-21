@@ -9,5 +9,6 @@ namespace University_E_Journal_PostgreSQL.Data.Entities
         public TeacherEntity Teacher { get; set; }
         public ICollection<GradeEntity> Grades { get; set; }
         public ICollection<StudentEntity> Students { get; set; }
+        public ICollection<AttendanceEntity> Attendances { get; set; }
     }
 }

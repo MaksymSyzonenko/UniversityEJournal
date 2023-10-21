@@ -11,5 +11,6 @@ namespace University_E_Journal_PostgreSQL.Data.Entities
         public GroupEntity Group { get; set; }
         public ICollection<GradeEntity> Grades { get; set; }
         public ICollection<SubjectEntity> Subjects { get; set; }
+        public ICollection<AttendanceEntity> Attendances { get; set; }
     }
 }

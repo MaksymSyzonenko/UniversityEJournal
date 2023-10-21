@@ -4,8 +4,8 @@ namespace University_E_Journal_PostgreSQL.CQRS.Grade.Queries.GetBestResults
 {
     public sealed class GetBestResultsQuery : IQuery
     {
-        public Guid SubjectId { get; set; }
-        public Guid GroupId { get; set; }
+        public Guid SubjectId { get; }
+        public Guid GroupId { get; }
         public GetBestResultsQuery(Guid subjectId, Guid groupId)
         {
             SubjectId = subjectId;
