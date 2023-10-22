@@ -4,11 +4,11 @@ namespace University_E_Journal_PostgreSQL.CQRS.Grade.Commands.Add
 {
     public sealed class AddGradeCommand : ICommand
     {
-        public int Value { get; set; }
-        public DateOnly Date { get; set; }
-        public Guid StudentId { get; set; }
-        public Guid SubjectId { get; set; }
-        public Guid TeacherId { get; set; }
+        public int Value { get; }
+        public DateOnly Date { get; }
+        public Guid StudentId { get; }
+        public Guid SubjectId { get; }
+        public Guid TeacherId { get; }
         public AddGradeCommand(int value, DateOnly date, Guid studentId, Guid subjectId, Guid teacherId)
         {
             Value = value;

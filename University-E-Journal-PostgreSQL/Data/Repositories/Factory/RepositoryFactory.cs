@@ -1,4 +1,5 @@
 using University_E_Journal_PostgreSQL.Data.Entities;
+using University_E_Journal_PostgreSQL.Data.Repositories.Attendances;
 using University_E_Journal_PostgreSQL.Data.Repositories.Grade;
 using University_E_Journal_PostgreSQL.Data.Repositories.Group;
 using University_E_Journal_PostgreSQL.Data.Repositories.Student;
@@ -19,6 +20,7 @@ namespace University_E_Journal_PostgreSQL.Data.Repositories.Factory
                 nameof(SubjectEntity) => new SubjectRepository(context),
                 nameof(GradeEntity) => new GradeRepository(context),
                 nameof(GroupEntity) => new GroupRepository(context),
+                nameof(AttendanceEntity) => new AttendanceRepository(context),
                 _ => throw new UnsupportedRepositoryTypeException(typeof(TEntity).Name)
             };
         }

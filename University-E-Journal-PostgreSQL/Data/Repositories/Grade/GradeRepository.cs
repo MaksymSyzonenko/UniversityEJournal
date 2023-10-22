@@ -36,7 +36,10 @@ namespace University_E_Journal_PostgreSQL.Data.Repositories.Grade
             else
                 return "No data.";
         }
-
+        public async Task<IEnumerable<GradeEntity>> GetGradesForStudent(Guid id)
+        {
+            return await _context.Grades.Where(g => g.StudentId == id).ToListAsync();
+        }
     }
 }
 

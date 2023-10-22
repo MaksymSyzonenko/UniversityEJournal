@@ -6,6 +6,7 @@ namespace University_E_Journal_PostgreSQL.Data.Repositories.Grade
     {
         Task Add(GradeEntity entity);
         Task<string> GetBestResults(Guid subjectId, Guid groupId);
+        Task<IEnumerable<GradeEntity>> GetGradesForStudent(Guid id);
     }
 }
 

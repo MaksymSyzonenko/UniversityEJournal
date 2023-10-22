@@ -22,5 +22,7 @@ namespace University_E_Journal_PostgreSQL.Data.Repositories.Student
         {
             return await _context.Students.SingleOrDefaultAsync(p => p.Id == id);
         }
+
+        
     }
 }

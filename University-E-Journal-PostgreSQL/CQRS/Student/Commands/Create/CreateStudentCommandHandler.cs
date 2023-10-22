@@ -16,7 +16,7 @@ namespace University_E_Journal_PostgreSQL.CQRS.Student.Commands.Create
 
         async Task ICommandHandler<CreateStudentCommand>.Handle(CreateStudentCommand command)
         {
-            StudentEntity entity = new StudentEntity()
+            StudentEntity entity = new()
             {
                 Id = Guid.NewGuid(),
                 FirstName = command.FirstName,

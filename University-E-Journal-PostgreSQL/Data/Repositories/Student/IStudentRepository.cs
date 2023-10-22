@@ -6,6 +6,7 @@ namespace University_E_Journal_PostgreSQL.Data.Repositories.Student
     {
         Task Create(StudentEntity entity);
         Task<StudentEntity?> FindSingle(Guid id);
+        
     }
 }
 
