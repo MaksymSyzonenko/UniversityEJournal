@@ -1,5 +1,12 @@
 using Microsoft.AspNetCore.Mvc.Controllers;
+using University_E_Journal_PostgreSQL.CQRS.Core.Command;
+using University_E_Journal_PostgreSQL.CQRS.Core.Query;
+using University_E_Journal_PostgreSQL.CQRS.Student.Commands.Create;
+using University_E_Journal_PostgreSQL.CQRS.Student.Queries.FindStudent;
+using University_E_Journal_PostgreSQL.Data.DTO.Student;
 using University_E_Journal_PostgreSQL.Extensions;
+using University_E_Journal_PostgreSQL.Extensions.CQRS;
+
 namespace University_E_Journal
 {
     public class Program
@@ -24,7 +31,10 @@ namespace University_E_Journal
                 .AddGroupCommands()
                 .AddSubjectCommands()
                 .AddTeacherCommands()
-                .AddGradeCommands();
+                .AddGradeCommands()
+                .AddDataAccess()
+                .AddSQRS()
+                .AddScoped<ICommandHandler<CreateStudentCommand>, CreateStudentCommandHandler>();
             builder.Services.AddSwaggerGen(options =>
             {
                 options.TagActionsBy(api =>

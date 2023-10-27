@@ -7,9 +7,9 @@ namespace University_E_Journal_PostgreSQL.CQRS.Student.Commands.Create
         public string FirstName { get; }
         public string LastName { get; }
         public int YearStudyStart { get; }
-        public Guid GroupId { get; }
+        public string GroupId { get; }
 
-        public CreateStudentCommand(string firstName, string lastName, int yearStudyStart, Guid groupId)
+        public CreateStudentCommand(string firstName, string lastName, int yearStudyStart, string groupId)
         {
             FirstName = firstName;
             LastName = lastName;

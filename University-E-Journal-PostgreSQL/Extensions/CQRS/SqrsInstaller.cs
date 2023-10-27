@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using University_E_Journal_PostgreSQL.MediatorImpl;
 
 namespace University_E_Journal_PostgreSQL.Extensions.CQRS
 {
@@ -7,12 +8,15 @@ namespace University_E_Journal_PostgreSQL.Extensions.CQRS
         public static IServiceCollection AddSQRS(this IServiceCollection services)
         {
             services
-                .AddStudentCommands()
-                .AddStudentQueries();
+                .AddScoped<IMediator, Mediator>();
 
             services
-                .AddGradeCommands() 
-                .AddGradeQueries();
+                .AddStudentCommandsCQRS()
+                .AddStudentQueriesCQRS();
+
+            services
+                .AddGradeCommandsCQRS() 
+                .AddGradeQueriesCQRS();
 
             return services;
         }

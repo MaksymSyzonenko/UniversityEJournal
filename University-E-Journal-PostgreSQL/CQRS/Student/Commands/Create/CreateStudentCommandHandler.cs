@@ -22,7 +22,7 @@ namespace University_E_Journal_PostgreSQL.CQRS.Student.Commands.Create
                 FirstName = command.FirstName,
                 LastName = command.LastName,
                 YearStudyStart = command.YearStudyStart,
-                GroupId = command.GroupId,
+                GroupId = Guid.Parse(command.GroupId)
             };
 
             await ((IStudentRepository)_unitOfWork.Repository<StudentEntity>()).Create(entity);

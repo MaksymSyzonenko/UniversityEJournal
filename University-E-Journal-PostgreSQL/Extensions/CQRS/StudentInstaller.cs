@@ -6,7 +6,7 @@ namespace University_E_Journal_PostgreSQL.Extensions.CQRS
 {
     public static class StudentInstaller
     {
-        public static IServiceCollection AddStudentCommands(this IServiceCollection services)
+        public static IServiceCollection AddStudentCommandsCQRS(this IServiceCollection services)
         {
             services
                 .AddScoped<ICreateStudentCommandHandler, CreateStudentCommandHandler>();
@@ -14,7 +14,7 @@ namespace University_E_Journal_PostgreSQL.Extensions.CQRS
             return services;
         }
 
-        public static IServiceCollection AddStudentQueries(this IServiceCollection services)
+        public static IServiceCollection AddStudentQueriesCQRS(this IServiceCollection services)
         {
             services
                 .AddScoped<IFindStudentQueryHandler, FindStudentQueryHandler>();

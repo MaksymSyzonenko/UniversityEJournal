@@ -1,6 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using University_E_Journal_PostgreSQL.Data.Repositories.Attendances;
 using University_E_Journal_PostgreSQL.Data.Repositories.Factory;
+using University_E_Journal_PostgreSQL.Data.Repositories.Grade;
 using University_E_Journal_PostgreSQL.Data.Repositories.Group;
 using University_E_Journal_PostgreSQL.Data.Repositories.Student;
 using University_E_Journal_PostgreSQL.Data.Repositories.Subject;
@@ -16,6 +17,7 @@ namespace University_E_Journal_PostgreSQL.Extensions
             services
                 .AddScoped<IStudentRepository, StudentRepository>()
                 .AddScoped<ITeacherRepository, TeacherRepository>()
+                .AddScoped<IGradeRepository, GradeRepository>()
                 .AddScoped<ISubjectRepository, SubjectRepository>()
                 .AddScoped<IGroupRepository, GroupRepository>()
                 .AddScoped<IAttendanceRepository, AttendanceRepository>();
