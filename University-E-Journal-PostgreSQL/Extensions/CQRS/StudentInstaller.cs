@@ -1,6 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
+using University_E_Journal_PostgreSQL.CQRS.Core.Query;
 using University_E_Journal_PostgreSQL.CQRS.Student.Commands.Create;
 using University_E_Journal_PostgreSQL.CQRS.Student.Queries.FindStudent;
+using University_E_Journal_PostgreSQL.Data.DTO.Student;
 
 namespace University_E_Journal_PostgreSQL.Extensions.CQRS
 {
@@ -16,8 +18,11 @@ namespace University_E_Journal_PostgreSQL.Extensions.CQRS
 
         public static IServiceCollection AddStudentQueriesCQRS(this IServiceCollection services)
         {
+            //services
+            //    .AddScoped<IFindStudentQueryHandler, FindStudentQueryHandler>();
+
             services
-                .AddScoped<IFindStudentQueryHandler, FindStudentQueryHandler>();
+                .AddScoped<IQueryHandler<FindStudentQuery, StudentInfoDto?>, FindStudentQueryHandler>();
 
             return services;
         }

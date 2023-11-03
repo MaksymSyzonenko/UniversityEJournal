@@ -33,8 +33,7 @@ namespace University_E_Journal
                 .AddTeacherCommands()
                 .AddGradeCommands()
                 .AddDataAccess()
-                .AddSQRS()
-                .AddScoped<ICommandHandler<CreateStudentCommand>, CreateStudentCommandHandler>();
+                .AddCQRS();
             builder.Services.AddSwaggerGen(options =>
             {
                 options.TagActionsBy(api =>

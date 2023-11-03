@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Runtime.CompilerServices;
 using University_E_Journal_PostgreSQL.Commands.Student.Create;
+using University_E_Journal_PostgreSQL.CQRS.Core.Query;
 using University_E_Journal_PostgreSQL.CQRS.Student.Commands.Create;
 using University_E_Journal_PostgreSQL.CQRS.Student.Queries.FindStudent;
 using University_E_Journal_PostgreSQL.Data.DTO.Student;
