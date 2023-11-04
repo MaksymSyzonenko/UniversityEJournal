@@ -19,29 +19,31 @@ namespace University_E_Journal.BuisnessLogic.Reports.StudentReports.ReportParts
 
         public override string GetStringReportPart()
         {
-            List<GradeEntity> grades = ((IGradeRepository)_unitOfWork.Repository<GradeEntity>()).GetGradesForStudent(_entity.Id).Result.ToList();
+            var gradeRepository = (IGradeRepository)_unitOfWork.Repository<GradeEntity>();
+            var attendanceRepository = (IAttendanceRepository)_unitOfWork.Repository<AttendanceEntity>();
 
-            List<AttendanceEntity> attendances = ((IAttendanceRepository)_unitOfWork
-                .Repository<AttendanceEntity>())
-                .GetStudentAttendance(_entity.Id).Result.ToList();
+            var grades = gradeRepository.GetGradesForStudent(_entity.Id).Result.ToList();
+            var attendances = attendanceRepository.GetStudentAttendance(_entity.Id).Result.ToList();
 
-            string result = string.Empty;
+            if (grades == null || !grades.Any() || attendances == null || !attendances.Any())
+            {
+                return "Conclusion: Student is at a low level of learning.";
+            }
 
             int totalGrades = grades.Count;
             int totalScore = grades.Sum(grade => grade.Value);
             double averageScore = (double)totalScore / totalGrades;
 
-            if (grades == null || grades.Count == 0 || attendances == null
-                || attendances.Count == 0 || attendances.All(a => !a.Attended)
-                || (attendances.Count(a => a.Attended) < attendances.Count(a => !a.Attended))
-                || averageScore < UniversityStudyNorm.AverageStudentGrade)
-            {
-                result = "Conclusion: Student is at a low level of learning.";
-            }
-            else
-                result = "Conclusion: Student is at a normal level of learning.";
+            bool hasLowAttendance = attendances.All(a => !a.Attended) ||
+                                    (attendances.Count(a => a.Attended) < attendances.Count(a => !a.Attended));
+            bool belowAverageGrade = averageScore < UniversityStudyNorm.AverageStudentGrade;
 
-            return result;
+            if (hasLowAttendance || belowAverageGrade)
+            {
+                return "Conclusion: Student is at a low level of learning.";
+            }
+
+            return "Conclusion: Student is at a normal level of learning.";
         }
     }
 }

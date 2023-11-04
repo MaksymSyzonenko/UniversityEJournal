@@ -3,12 +3,11 @@ using University_E_Journal_PostgreSQL.MediatorImpl;
 
 namespace University_E_Journal_PostgreSQL.Extensions.CQRS
 {
-    public static class SqrsInstaller
+    public static class CqrsInstaller
     {
-        public static IServiceCollection AddSQRS(this IServiceCollection services)
+        public static IServiceCollection AddCQRS(this IServiceCollection services)
         {
-            services
-                .AddScoped<IMediator, Mediator>();
+            
 
             services
                 .AddStudentCommandsCQRS()
@@ -17,6 +16,9 @@ namespace University_E_Journal_PostgreSQL.Extensions.CQRS
             services
                 .AddGradeCommandsCQRS() 
                 .AddGradeQueriesCQRS();
+
+            services
+                .AddScoped<IMediator, Mediator>();
 
             return services;
         }

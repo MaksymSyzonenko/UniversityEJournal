@@ -1,6 +1,7 @@
 ﻿using University_E_Journal_PostgreSQL.Data;
 using University_E_Journal_PostgreSQL.Data.Entities;
 using University_E_Journal_PostgreSQL.Data.DTO.Student;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace University_E_Journal_PostgreSQL.Commands.Student.Create
 {
@@ -15,10 +16,11 @@ namespace University_E_Journal_PostgreSQL.Commands.Student.Create
         {
             StudentEntity student = new()
             {
+                Id = Guid.NewGuid(),
                 FirstName = dto.FirstName,
                 LastName = dto.LastName,
                 YearStudyStart = dto.YearStudyStart,
-                GroupId = dto.GroupId
+                GroupId = Guid.Parse(dto.GroupId)
             };
 
             _context.Students.Add(student);

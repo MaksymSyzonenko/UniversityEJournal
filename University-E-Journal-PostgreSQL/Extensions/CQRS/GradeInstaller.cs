@@ -7,7 +7,7 @@ namespace University_E_Journal_PostgreSQL.Extensions.CQRS
 {
     public static class GradeInstaller
     {
-        public static IServiceCollection AddGradeCommands(this IServiceCollection services)
+        public static IServiceCollection AddGradeCommandsCQRS(this IServiceCollection services)
         {
             services
                 .AddScoped<IAddGradeCommandHandler, AddGradeCommandHandler>();
@@ -15,7 +15,7 @@ namespace University_E_Journal_PostgreSQL.Extensions.CQRS
             return services;
         }
 
-        public static IServiceCollection AddGradeQueries(this IServiceCollection services)
+        public static IServiceCollection AddGradeQueriesCQRS(this IServiceCollection services)
         {
             services
                 .AddScoped<IGetBestResultsQueryHandler, GetBestResultsQueryHandler>();
